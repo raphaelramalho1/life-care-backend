@@ -30,6 +30,9 @@ import configuration from './config/configuration';
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: configService.get('DB_SYNCHRONIZE', true),
         logging: true,
+        ssl: {
+          rejectUnauthorized: false, // ✅ Necessário para conexão segura com banco na Render
+        },
       }),
     }),
     UsersModule,
