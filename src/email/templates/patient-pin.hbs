@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PIN de Acesso - Maioridade App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        .header {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        .code-container {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .pin-code {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 3px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .patient-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="header">Maioridade App</h2>
+        <p>Olá,</p>
+        <p>Este é o PIN de acesso para <span class="patient-name">{{patientName}}</span>:</p>
+        
+        <div class="code-container">
+            <div class="pin-code">{{pin}}</div>
+        </div>
+
+        <p>Use este PIN para configurar o acesso do paciente no aplicativo Maioridade.</p>
+        <p>Por razões de segurança, não compartilhe este PIN com pessoas não autorizadas.</p>
+        
+        <div class="footer">
+            <p>Atenciosamente,<br>Equipe Maioridade</p>
+        </div>
+    </div>
+</body>
+</html>
