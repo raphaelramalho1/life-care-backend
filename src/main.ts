@@ -12,7 +12,12 @@ async function bootstrap() {
 
   // Configuração do CORS para permitir requisições do frontend
   app.enableCors({
-    origin: true,
+    origin: [
+      'http://localhost:4200',
+      'http://localhost:8100',
+      'https://lifecare-c2f8f.web.app',
+      'https://lifecare-c2f8f.firebaseapp.com'
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
