@@ -50,8 +50,8 @@ async function bootstrap() {
   // Configurar pasta para servir o index.html para rotas que não são explicitamente definidas
   // Isso é necessário para o funcionamento do PWA/SPA
   app.use((req, res, next) => {
-    // Pular para o próximo middleware se for uma requisição para a API
-    if (req.originalUrl.startsWith('/api')) {
+    // Pular para o próximo middleware se for uma requisição para a API ou autenticação
+    if (req.originalUrl.startsWith('/api') || req.originalUrl.startsWith('/auth')) {
       return next();
     }
     
